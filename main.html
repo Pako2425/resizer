@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="rectangle"
+            style="
+            background-color:cornflowerblue;
+            border: solid;
+            border-width: 3px;
+            border-color: black;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            align-content: center;
+        ">
+            <div class="resizer">
+
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const rect = document.querySelector('.rectangle');
+
+        rect.addEventListener('mousedown', () => console.log('Click!'));
+        
+    </script>
+</html>
