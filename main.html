@@ -9,22 +9,21 @@
             border: solid;
             border-width: 3px;
             border-color: black;
-            width: 100px;
-            height: 100px;
+            width: 300px;
+            height: 300px;
             text-align: center;
             align-content: center;
-            position: relative;
-            
+            position: relative;            
         ">
         <h1>hello</h1>
-            <div class="resizer n"></div>
-            <div class="resizer ne"></div>
-            <div class="resizer e"></div>
-            <div class="resizer se"></div>
-            <div class="resizer s"></div>
-            <div class="resizer sw"></div>
-            <div class="resizer w"></div>
-            <div class="resizer nw"></div>
+            <div class="resizer edge n"></div>
+            <div class="resizer corner ne"></div>
+            <div class="resizer edge e"></div>
+            <div class="resizer corner se"></div>
+            <div class="resizer edge s"></div>
+            <div class="resizer corner sw"></div>
+            <div class="resizer edge w"></div>
+            <div class="resizer corner nw"></div>
         </div>
     </body>
 
@@ -35,17 +34,18 @@
             height: 10px;
             box-sizing: border-box;
             background-color: blueviolet;
+            
         }
 
-        .resizer.n { top: -5px; left: 50%; transform: translateX(-50%); }
-        .resizer.e { top: 50%; right: -5px; transform: translateY(-50%); }
-        .resizer.s { bottom: -5px; left: 50%; transform: translateX(-50%); }
-        .resizer.w { top: 50%; left: -5px; transform: translateY(-50%); }
+        .resizer.n { top: -5px; left: 50%; transform: translateX(-50%); cursor: ns-resize; }
+        .resizer.e { top: 50%; right: -5px; transform: translateY(-50%); cursor: ew-resize; }
+        .resizer.s { bottom: -5px; left: 50%; transform: translateX(-50%); cursor: sn-resize; }
+        .resizer.w { top: 50%; left: -5px; transform: translateY(-50%); cursor: we-resize; }
 
-        .resizer.ne { top: -5px; right: -5px; }
-        .resizer.se { bottom: -5px; right: -5px; }
-        .resizer.sw { bottom: -5px; left: -5px; }
-        .resizer.nw { top: -5px; left: -5px; }
+        .resizer.ne { top: -5px; right: -5px; cursor: ne-resize; }
+        .resizer.se { bottom: -5px; right: -5px; cursor: se-resize; }
+        .resizer.sw { bottom: -5px; left: -5px; cursor: sw-resize; }
+        .resizer.nw { top: -5px; left: -5px; cursor: nw-resize; }
     </style>
 
     <script>
